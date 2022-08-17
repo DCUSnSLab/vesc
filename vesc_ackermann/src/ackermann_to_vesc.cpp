@@ -31,6 +31,7 @@ AckermannToVesc::AckermannToVesc(ros::NodeHandle nh, ros::NodeHandle private_nh)
 
   // subscribe to ackermann topic
   ackermann_sub_ = nh.subscribe("ackermann_cmd", 10, &AckermannToVesc::ackermannCmdCallback, this);
+  //ackermann_sub_ = nh.subscribe("/sns_msg", 10, &AckermannToVesc::ackermannCmdCallback, this);
 }
 
 typedef ackermann_msgs::AckermannDriveStamped::ConstPtr AckermannMsgPtr;
